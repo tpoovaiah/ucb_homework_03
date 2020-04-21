@@ -1,0 +1,19 @@
+.bg {
+    background-color: whitesmoke;
+}
+
+.title {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.jumbotron {
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: white;
+}
+
+.form-control {
+    border: dashed 2px lightgray;
+}
