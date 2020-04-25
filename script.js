@@ -1,91 +1,175 @@
+function generatePassword() {
 
-var pwdLength = prompt("Enter a number between 8 and 128.")
-//var charTypes = ["lowercase", "uppercase", "numeric", "special"]
-var lowerChar = confirm("click OK if you would like your password to use lowercase letters")
-var upperChar = confirm("click OK if you would like your password to use uppercase letters")
-var numChar = confirm("click OK if you would like your password to use numbers")
-var specialChar = confirm("click OK if you would like your password to use special characters")
-var passArray = []
-
-
-//1
-if (lowerChar===true && upperChar===false && numChar===false && specialChar===false) {
-    for (var i = 0; i < pwdLength; i++) {
-        var lower = "abcdefghijklmnopqrstuvwxyz"
-        var randomChar = lower[Math.floor(Math.random() * lower.length)];
-        passArray.push(randomChar)
-        console.log(passArray)
+    var pwdLength = prompt("Enter a number between 8 and 128.")
+    var lowerChar = confirm("click OK if you would like your password to use lowercase letters")
+    var upperChar = confirm("click OK if you would like your password to use uppercase letters")
+    var numChar = confirm("click OK if you would like your password to use numbers")
+    var specialChar = confirm("click OK if you would like your password to use special characters")
+    var passArray = []
+    
+    //lower all true
+    //1
+    if (lowerChar===true && upperChar===false && numChar===false && specialChar===false) {
+        for (var i = 0; i < pwdLength; i++) {
+            var charSet = "abcdefghijklmnopqrstuvwxyz"
+            var randomChar = charSet[Math.floor(Math.random() * charSet.length)];
+            passArray.push(randomChar)
+        }
+        document.getElementById("password").innerHTML = passArray.join('')
     }
-    document.getElementById("password").innerHTML = passArray.join('')
-}
-//2
-else if (lowerChar===true && upperChar===true && numChar===false && specialChar===false) {
-    for (var i = 0; i < pwdLength; i++) {
-        var lower = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
-        var randomChar = lower[Math.floor(Math.random() * lower.length)];
-        passArray.push(randomChar)
-        console.log(passArray)
+    //2
+    else if (lowerChar===true && upperChar===true && numChar===false && specialChar===false) {
+        for (var i = 0; i < pwdLength; i++) {
+            var charSet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            var randomChar = charSet[Math.floor(Math.random() * charSet.length)];
+            passArray.push(randomChar)
+        }
+        document.getElementById("password").innerHTML = passArray.join('')
     }
-    document.getElementById("password").innerHTML = passArray.join('')
-}
-//3
-else if (lowerChar===true && upperChar===false && numChar===true && specialChar===false) {
-    for (var i = 0; i < pwdLength; i++) {
-        var lower = "abcdefghijklmnopqrstuvwxyz0123456789"
-        var randomChar = lower[Math.floor(Math.random() * lower.length)];
-        passArray.push(randomChar)
-        console.log(passArray)
+    //3
+    else if (lowerChar===true && upperChar===false && numChar===true && specialChar===false) {
+        for (var i = 0; i < pwdLength; i++) {
+            var charSet = "abcdefghijklmnopqrstuvwxyz0123456789"
+            var randomChar = charSet[Math.floor(Math.random() * charSet.length)];
+            passArray.push(randomChar)
+    
+        }
+        document.getElementById("password").innerHTML = passArray.join('')
     }
-    document.getElementById("password").innerHTML = passArray.join('')
-}
-//4
-else if (lowerChar===true && upperChar===false && numChar===false && specialChar===true) {
-    for (var i = 0; i < pwdLength; i++) {
-        var lower = "abcdefghijklmnopqrstuvwxyz!#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
-        var randomChar = lower[Math.floor(Math.random() * lower.length)];
-        passArray.push(randomChar)
-        console.log(passArray)
+    //4
+    else if (lowerChar===true && upperChar===false && numChar===false && specialChar===true) {
+        for (var i = 0; i < pwdLength; i++) {
+            var charSet = "abcdefghijklmnopqrstuvwxyz!#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
+            var randomChar = charSet[Math.floor(Math.random() * charSet.length)];
+            passArray.push(randomChar)
+    
+        }
+        document.getElementById("password").innerHTML = passArray.join('')
     }
-    document.getElementById("password").innerHTML = passArray.join('')
-}
-
-//5
-else if (lowerChar===true && upperChar===true && numChar===true && specialChar===false) {
-    for (var i = 0; i < pwdLength; i++) {
-        var lower = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
-        var randomChar = lower[Math.floor(Math.random() * lower.length)];
-        passArray.push(randomChar)
-        console.log(passArray)
+    
+    //5
+    else if (lowerChar===true && upperChar===true && numChar===true && specialChar===false) {
+        for (var i = 0; i < pwdLength; i++) {
+            var charSet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+            var randomChar = charSet[Math.floor(Math.random() * charSet.length)];
+            passArray.push(randomChar)
+        }
+        document.getElementById("password").innerHTML = passArray.join('')
     }
-    document.getElementById("password").innerHTML = passArray.join('')
-}
-//6
-else if (lowerChar===true && upperChar===true && numChar===true && specialChar===true) {
-    for (var i = 0; i < pwdLength; i++) {
-        var lower = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
-        var randomChar = lower[Math.floor(Math.random() * lower.length)];
-        passArray.push(randomChar)
-        console.log(passArray)
+    //6
+    else if (lowerChar===true && upperChar===true && numChar===false && specialChar===true) {
+        for (var i = 0; i < pwdLength; i++) {
+            var charSet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
+            var randomChar = charSet[Math.floor(Math.random() * charSet.length)];
+            passArray.push(randomChar)
+        }
+        document.getElementById("password").innerHTML = passArray.join('')
     }
-    document.getElementById("password").innerHTML = passArray.join('')
-}
-//7
-else if (lowerChar===true && upperChar===true && numChar===true && specialChar===true) {
-    for (var i = 0; i < pwdLength; i++) {
-        var lower = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
-        var randomChar = lower[Math.floor(Math.random() * lower.length)];
-        passArray.push(randomChar)
-        console.log(passArray)
+    //7
+    else if (lowerChar===true && upperChar===false && numChar===true && specialChar===true) {
+        for (var i = 0; i < pwdLength; i++) {
+            var charSet = "abcdefghijklmnopqrstuvwxyz0123456789!#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
+            var randomChar = charSet[Math.floor(Math.random() * charSet.length)];
+            passArray.push(randomChar)
+        }
+        document.getElementById("password").innerHTML = passArray.join('')
     }
-    document.getElementById("password").innerHTML = passArray.join('')
+    //8
+    else if (lowerChar===true && upperChar===true && numChar===true && specialChar===true) {
+        for (var i = 0; i < pwdLength; i++) {
+            var charSet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
+            var randomChar = charSet[Math.floor(Math.random() * charSet.length)];
+            passArray.push(randomChar)
+        }
+        document.getElementById("password").innerHTML = passArray.join('')
+    }
+    
+    //upper all true (no redundancies with upper all true)
+    
+    //9
+    else if (lowerChar===false && upperChar===true && numChar===false && specialChar===false) {
+        for (var i = 0; i < pwdLength; i++) {
+            var charSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            var randomChar = charSet[Math.floor(Math.random() * charSet.length)];
+            passArray.push(randomChar)
+        }
+        document.getElementById("password").innerHTML = passArray.join('')
+    }
+    
+    
+    //10
+    else if (lowerChar===false && upperChar===true && numChar===true && specialChar===false) {
+        for (var i = 0; i < pwdLength; i++) {
+            var charSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+            var randomChar = charSet[Math.floor(Math.random() * charSet.length)];
+            passArray.push(randomChar)
+        }
+        document.getElementById("password").innerHTML = passArray.join('')
+    }
+    
+    //11
+    else if (lowerChar===false && upperChar===true && numChar===false && specialChar===true) {
+        for (var i = 0; i < pwdLength; i++) {
+            var charSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ!#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
+            var randomChar = charSet[Math.floor(Math.random() * charSet.length)];
+            passArray.push(randomChar)
+        }
+        document.getElementById("password").innerHTML = passArray.join('')
+    }
+    
+    //12
+    else if (lowerChar===false && upperChar===true && numChar===true && specialChar===true) {
+        for (var i = 0; i < pwdLength; i++) {
+            var charSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
+            var randomChar = charSet[Math.floor(Math.random() * charSet.length)];
+            passArray.push(randomChar)
+        }
+        document.getElementById("password").innerHTML = passArray.join('')
+    }
+    
+    //12 (all numeric true, no redundancies)
+    else if (lowerChar===false && upperChar===false && numChar===true && specialChar===false) {
+        for (var i = 0; i < pwdLength; i++) {
+            var charSet = "0123456789"
+            var randomChar = charSet[Math.floor(Math.random() * charSet.length)];
+            passArray.push(randomChar)
+        }
+        document.getElementById("password").innerHTML = passArray.join('')
+    }
+    
+    //13
+    else if (lowerChar===false && upperChar===false && numChar===true && specialChar===true) {
+        for (var i = 0; i < pwdLength; i++) {
+            var charSet = "0123456789!#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
+            var randomChar = charSet[Math.floor(Math.random() * charSet.length)];
+            passArray.push(randomChar)
+        }
+        document.getElementById("password").innerHTML = passArray.join('')
+    }
+    //14 (all special true)
+    else if (lowerChar===false && upperChar===false && numChar===false && specialChar===true) {
+        for (var i = 0; i < pwdLength; i++) {
+            var charSet = "!#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
+            var randomChar = charSet[Math.floor(Math.random() * charSet.length)];
+            passArray.push(randomChar)
+        }
+        document.getElementById("password").innerHTML = passArray.join('')
+    }
+    
+    else if (lowerChar===false && upperChar===false && numChar===false && specialChar===false) {
+        alert("Error! Must choose at least one character type.")
+    }
+
 }
 
 
 
-
-
-
-
+function clipboard() {
+    var copyText = document.getElementById("password")
+    copyText.select();
+  copyText.setSelectionRange(0, 99999)
+  document.execCommand("copy");
+  }
 
 
 // if (lowerChar===true) {
