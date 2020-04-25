@@ -14,6 +14,8 @@
     background-color: white;
 }
 
-.form-control {
+.format {
     border: dashed 2px lightgray;
+    height: 100px;
+    text-align: center;
 }
