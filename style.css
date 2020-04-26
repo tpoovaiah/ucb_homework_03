@@ -16,6 +16,7 @@
 
 .format {
     border: dashed 2px lightgray;
-    height: 100px;
+    height: 200px;
+    width: 100%;
     text-align: center;
 }

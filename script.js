@@ -1,10 +1,10 @@
 function generatePassword() {
 
-    var pwdLength = prompt("Enter a number between 8 and 128.")
-    var lowerChar = confirm("click OK if you would like your password to use lowercase letters")
-    var upperChar = confirm("click OK if you would like your password to use uppercase letters")
-    var numChar = confirm("click OK if you would like your password to use numbers")
-    var specialChar = confirm("click OK if you would like your password to use special characters")
+    var pwdLength = prompt("Choose your password length. Enter a number between 8 and 128.")
+    var lowerChar = confirm("Click 'OK' if you would like your password to contain lowercase letters")
+    var upperChar = confirm("Click 'OK' if you would like your password to contain uppercase letters")
+    var numChar = confirm("Click 'OK' if you would like your password to contain numbers")
+    var specialChar = confirm("Click 'OK' if you would like your password to contain special characters")
     var passArray = []
     
     //lower all true
@@ -163,13 +163,32 @@ function generatePassword() {
 }
 
 
+//copy items to clipboard
+var copyText = document.getElementById("password")
+var copyButton = document.getElementById("copyButton")
 
-function clipboard() {
-    var copyText = document.getElementById("password")
+copyButton.onclick = function clipboardCopy() {
     copyText.select();
-  copyText.setSelectionRange(0, 99999)
-  document.execCommand("copy");
+    document.execCommand("Copy")
   }
+
+
+
+
+
+
+
+
+
+
+// Weird other things I tried and want to revisit at some point:
+
+
+
+
+
+
+
 
 
 // if (lowerChar===true) {
@@ -177,19 +196,12 @@ function clipboard() {
 //     for (i=0; i<Number.pwdLength; i++) {
 //         pwd = lowerChar[Math.floor(Math.random() * lowerChar.length)];
 //         console.log(pwd)
-//     }
-    
+//     }  
 // }
-
 //var pwd = ""
-
-
 // for(var i = 0; i <charTypes.length; i++) {
 //     var types = confirm("Click OK if you would like your password to use " + (charTypes[i]) + " characters.")
-
 // }
-
-
 // for(var i = 0; i <1; i++) {
 //     var upperArr = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 //     var randomUpper = upperArr[Math.floor(Math.random() * upperArr.length)];
@@ -242,25 +254,14 @@ function clipboard() {
 //         var pwd = Math.floor(Math.random() * chars.length) + 1;
 // }
 // console.log(pwd)
-// }
-
-
+// 
 // for(var i = 0; i <Number.pwdLength; i++) {
 //     var lower = lowerChar[Math.floor(Math.random() * lowerChar.length)];
 //     console.log(lower)
 // }
-
-
-
-
-
 // for(var i = 0; i <= Number.pwdLength; i++) {
 //     var pwdType = [Math.floor(Math.random() * computerChoices.length)];
 // }
-
-
-
-
 
 // var lower = confirm("lowercase?")
 // var numeric = confirm("numbers?")
@@ -270,12 +271,6 @@ function clipboard() {
 // var upperArr = [ABCDEFGHIJKLMNOPQRSTUVWXYZ]
 // var numArr = [0123456789]
 // var specialArr = ["!#$%&'()*+,-./:;<=>?@[\]^_`{|}~"]
-
-
-
-
-
-
 // var randomSel = chars[Math.floor(Math.random() * chars.length)];
 // if 
 

@@ -36,13 +36,13 @@ have option to click to copy phrase.  -->
             <h2>Generate a Password</h2>
             <hr class="my-4">
            
-                <div class="format">
-                    <p id="password">Your Secure Password</p> 
+                <div>
+                    <textarea id="password" class="format">Your Secure Password</textarea>
                 </div>
             
             <hr class="my-4">
             <button type="button" class="btn btn-primary btn-lg float-left ml-4" onclick="generatePassword()">Generate Password</button>
-            <button type="button" class="btn btn-secondary btn-lg float-right mr-4" onclick="myFunction()">Copy to Clipboard</button>
+            <button type="button" class="btn btn-secondary btn-lg float-right mr-4" id="copyButton">Copy to Clipboard</button>
           </div>
         
 
